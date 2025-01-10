@@ -1,4 +1,4 @@
-# Sistema de Urbanização Sustentável (S.U.S)
+# Sistema de Urbanização Sustentável (S.U.S) - StarEco
 
 Um sistema web desenvolvido em Django para gerenciar e monitorar projetos de urbanização sustentável em Angola. O projeto é uma iniciativa da StarEco para facilitar a migração de populações do meio rural para áreas urbanas de forma sustentável e inclusiva.
 
@@ -18,12 +18,46 @@ Um sistema web desenvolvido em Django para gerenciar e monitorar projetos de urb
 - CSS3
 - JavaScript
 
+## 📁 Estrutura do Projeto
+
+```
+starteco/
+│
+├── setup/
+│   ├── __pycache__/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── starteco/
+│   ├── __pycache__/
+│   ├── migrations/
+│   ├── statics/
+│   ├── templates/
+│   │   └── starteco/
+│   │       ├── CSS CÓDIGO.css
+│   │       ├── JS CÓDIGO.js
+│   │       └── home.html
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   └── views.py
+│
+├── venv/
+└── manage.py
+```
+
 ## 🛠️ Instalação
 
 1. Clone o repositório
 ```bash
-git clone https://github.com/seu-usuario/sus-project.git
-cd sus-project
+git clone https://github.com/Emicy963/StartEco-by-DOMAG-Tech
+cd starteco
 ```
 
 2. Crie um ambiente virtual
@@ -42,7 +76,7 @@ source venv/bin/activate
 
 4. Instale as dependências
 ```bash
-pip install -r requirements.txt
+pip install django
 ```
 
 5. Execute as migrações
@@ -60,71 +94,17 @@ python manage.py createsuperuser
 python manage.py runserver
 ```
 
-## 📁 Estrutura do Projeto
-
-```
-sus_project/
-│
-├── manage.py
-├── requirements.txt
-├── venv/
-├── sus/
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   ├── wsgi.py
-│   └── asgi.py
-│
-└── home/
-    ├── __init__.py
-    ├── admin.py
-    ├── apps.py
-    ├── models.py
-    ├── views.py
-    ├── urls.py
-    └── templates/
-        └── home/
-            └── index.html
-```
-
 ## ⚙️ Configuração
 
-1. No arquivo `settings.py`, certifique-se de que 'home' está incluído em INSTALLED_APPS:
+1. O projeto já está configurado com a estrutura correta de arquivos e diretórios.
 
-```python
-INSTALLED_APPS = [
-    'django.contrib.admin',
-    'django.contrib.auth',
-    'django.contrib.contenttypes',
-    'django.contrib.sessions',
-    'django.contrib.messages',
-    'django.contrib.staticfiles',
-    'home',
-]
-```
+2. As configurações principais estão em `setup/settings.py`.
 
-2. Configure as URLs em `sus/urls.py`:
+3. As rotas principais estão definidas em `setup/urls.py`.
 
-```python
-from django.contrib import admin
-from django.urls import path, include
+4. As rotas da aplicação estão em `starteco/urls.py`.
 
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('home.urls')),
-]
-```
-
-3. Configure as URLs do app em `home/urls.py`:
-
-```python
-from django.urls import path
-from . import views
-
-urlpatterns = [
-    path('', views.home_view, name='home'),
-]
-```
+5. Os templates e arquivos estáticos estão organizados em seus respectivos diretórios dentro de `starteco/`.
 
 ## 🔍 Uso
 
@@ -143,9 +123,9 @@ urlpatterns = [
 ## 👥 Contribuição
 
 1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Faça commit das suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Faça push para a branch (`git push origin feature/AmazingFeature`)
+2. Crie uma branch para sua feature (`git checkout -b feature/NovaFuncionalidade`)
+3. Faça commit das suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Faça push para a branch (`git push origin feature/NovaFuncionalidade`)
 5. Abra um Pull Request
 
 ## 📝 Licença
