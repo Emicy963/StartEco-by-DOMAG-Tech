@@ -136,7 +136,3 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 - CODEPOINT
 - DOMAG TECH
-
-## 📧 Contato
-
-Para mais informações sobre o projeto, entre em contato com [seu-email@email.com].
